@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+* root element font size */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* global styles */
+h1, h2, h3, h4, .tag {
+    font-family: var(--font-header);
+    line-height: 120%;
+}
+
+
+/* This ensures images scale down on smaller screens but don't exceed their original size.*/
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3, .tag {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+
+/* set sizing on big screen */
+
+.container {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 5rem 0;
+}
+
+
+
+/* Benefit section styles */
+
+.divider {
+    height: 0.0625rem;
+    background-color: #F4F3F1;
+    margin: 3rem 0 4rem;
+}
+
+.benefit-content {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr;* /
+
+    /* To repeat all or part of our grid items */
+    /*grid-template-columns: repeat(3, 1fr); */
+    gap: 64px 1rem;
+
+    /* to control or set sizes of our implicit grid tracks */
+    /* grid-auto-rows: 22rem;/
+
+
+    /* The minmax() function let us set a min max sizes for our tracks, as we can see a good example of using the minmax function combined with the repeat() function is to set as many column that can fit our container*/
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+
+    /* the minmax() function can also help us control the height of our track from a min 15rem to a max that allows the whole content to fit. */
+    grid-auto-rows: minmax(15rem, auto)
+}
+
+.benefit-card {
+    padding: 2.5rem 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 1rem;
+}
+
+.benefit-card h3 {
+    margin: 2rem 0 .6rem;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+header, footer {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79, 185, 227);
+}
+
+aside {
+    border-right: 1px solid #999;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: none;
+        width: auto;
+        padding: 0 2.5rem;
+    }
+}
+
+
+
+/* Mobile - Landcape CSS */
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+
+/* Mobile - Portrait CSS */
+@media screen and (max-width: 479px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
